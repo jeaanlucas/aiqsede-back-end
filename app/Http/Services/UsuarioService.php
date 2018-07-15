@@ -2,8 +2,6 @@
 
 namespace App\Http\Services;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use JWTAuth;
 use JWTFactory;
 use Image;
@@ -18,13 +16,12 @@ class UsuarioService
     }
 
     public function listar() {
-        $dados = $this->usuario::all();
-
-        return response()->json($this->montaListagemUsuarios($dados));
+        return response()->json($this->montaListagemUsuarios($this->usuario::all()));
     }
 
-    private function montaListagemUsuarios($dados) {
-        foreach ($dados as $usuario) {
+    private function montaListagemUsuarios($usuarios) {
+        $response = [];
+        foreach ($usuarios as $usuario) {
             $response[] = [
                 'id' => $usuario->id,
                 'nome' => $usuario->nome,

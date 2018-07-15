@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Services\UsuarioService;
+use App\Http\Request\LoginRequest;
+use App\Http\Request\CriarUsuarioRequest;
+use App\Http\Request\CriarAvatarRequest;
 
 class UsuarioController extends Controller
 {
@@ -23,7 +26,7 @@ class UsuarioController extends Controller
             ->getDados($id);
     }
 
-    public function criarUsuario(Request $request) {
+    public function criarUsuario(CriarUsuarioRequest $request) {
         return $this->usuarioService
             ->criar($request);
     }
@@ -38,7 +41,7 @@ class UsuarioController extends Controller
             ->deletar($id);
     }
 
-    public function adicionarAvatar($id, Request $request) {
+    public function adicionarAvatar($id, CriarAvatarRequest $request) {
         return $this->usuarioService
             ->novoAvatar($id, $request->avatar);
     }
