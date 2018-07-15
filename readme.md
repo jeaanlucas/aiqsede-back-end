@@ -3,9 +3,9 @@
 
 É facil!
 
-Instale o docker na sua máquina. Onde? [Aqui](https://goo.gl/JmnqnK)
+Instale o [docker](https://goo.gl/JmnqnK) na sua máquina.
 
-Agora o docker compose. [Aqui](https://goo.gl/nzcP7q)
+Agora o [docker compose](https://goo.gl/nzcP7q).
 
 A seguir, na raiz do projeto execute o seguinte comando (*esse cara vai subir o PHP, o MySql tudo localmente*):
 ```
@@ -26,13 +26,13 @@ A API vai estar rodando localmente na porta 8081 (*localhost:8081/*).
 
 Um usuário já está criado. Já tem login e senha. É esse aqui:
 
-E-mail - *aiqsedeadm@aiqsede.com*
+**E-mail** - *aiqsedeadm@aiqsede.com*
 
-Senha - *aiqsede123*
+**Senha** - *aiqsede123*
 
 *TODAS AS INFORMAÇÕES DO SEU CONTAINER ESTÃO NO ARQUIVO* **docker-compose.yml** *NA RAIZ DO PROJETO*
 
 ## Documentação da API
 A mesma que essa aqui: *https://goo.gl/YXXKFv*
 
-PS.: Substituir o */desafio* por */api* nas rotas :D
+PS.: Substituir o **/desafio** por **/api** nas rotas :D
